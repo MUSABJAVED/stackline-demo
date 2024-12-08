@@ -7,15 +7,86 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.header-logo {
+  height: 80%; /* Adjust the logo size relative to the header height */
+  object-fit: contain; /* Ensure the image scales properly */
+  justify-self: flex-start;
+}
+
+.header {
+  height: 80px;
+  background-color: rgb(16 39 71);
+  color:  rgb(16 39 71);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bodyWindow {
+  flex: 25;
+  display: flex;
+  background-color: rgb(246 248 250);
+  color:rgb(246 248 250);
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: rgb(246 248 250);
+  padding-left: 20px;
+  padding-top: 80px;
+  display: flex;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.sidebar-content {
+  flex: 1;
+  background-color: rgb(255 255 255);
+  box-shadow: #171717;
+  color: rgb(178 186 199);
+  font-size:small;
+  text-align: center;
+}
+
+.graph {
+  flex: 4;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 80px;
+  align-content: stretch;
+  justify-content: stretch;
+}
+
+.graph-content {
+  flex: 1;
+  background-color: rgb(255 255 255);
+  color: black
+}
+
+.tags {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 5px;
+}
+
+.tag {
+  border-radius: 5px;
+  border: 1px solid rgb(178 186 199);
+  padding: 5px;
+  margin: 5px;
+}
+
